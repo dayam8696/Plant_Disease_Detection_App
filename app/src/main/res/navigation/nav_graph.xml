@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/detectFragment"
+        android:name="com.example.ai_plant_detection_project.DetectFragment"
+        android:label="DetectFragment"
+        tools:layout="@layout/detect_fragment"/>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.ai_plant_detection_project.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_detectFragment"
+            app:destination="@id/detectFragment" />
+    </fragment>
+</navigation>

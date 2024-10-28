@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Title and Description -->
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Capture or upload a photo of the leaf"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:textColor="@android:color/black"
+        android:paddingBottom="8dp" />
+
+    <!-- Icon Buttons Row -->
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="8dp">
+
+        <ImageButton
+            android:id="@+id/icCamera"
+            android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/cam"
+           android:background="@drawable/camera_border"
+            android:scaleType="centerCrop"
+        android:contentDescription="Open Camera"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp" />
+        <ImageButton
+            android:id="@+id/icGallery"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/gall"
+            android:contentDescription="Upload Image" />
+    </LinearLayout>
+
+    <!-- Detected Disease TextView -->
+    <TextView
+        android:id="@+id/mResultTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Detected disease will appear here"
+        android:textColor="@android:color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Image Placeholder with Adjusted Size -->
+    <ImageView
+        android:id="@+id/leafImageView"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_gravity="center"
+        android:background="@android:color/darker_gray"
+        android:src="@drawable/soybean"
+        android:contentDescription="Leaf Image"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Predict Disease Button -->
+    <Button
+        android:id="@+id/analyzeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Detect Disease"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#098116"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>
